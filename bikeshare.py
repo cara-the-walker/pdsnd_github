@@ -195,7 +195,7 @@ def main():
         while another_enquiry not in ('yes','no'):
             print('\n\nPlease enter a valid answer.')
             another_enquiry = input('Yes/No?     ').lower().strip()
-
+        #when no further enquiry, goodbye message ends the conversation as friendly gesture
         if another_enquiry == 'no':
             print('\n\nI am happy to help you. Have a nice day!')
             break

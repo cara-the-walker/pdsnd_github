@@ -6,7 +6,7 @@ Explore US Bikeshare Data
 
 ### Description
 System data are provided by Motivate, a bike share system provider for many major cities in the United States, to uncover bike share usage patterns.
-It is to take in raw input to create an interactive experience in the terminal to present the statistics related to bike share systems for three major cities in the United States—Chicago, New York City, and Washington.
+It is to take in raw input to create an interactive and friendly experience in the terminal to present the statistics related to bike share systems for three major cities in the United States—Chicago, New York City, and Washington.
 
 Randomly selected data for the first six months of 2017 are provided for all three cities. All three of the data files contain the same core six (6) columns:
 
