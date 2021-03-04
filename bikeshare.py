@@ -33,10 +33,10 @@ def get_filters():
     if month == 'no':
         month = 'all'
     elif month == 'yes':
-        month = input('January, February,...,June?      ')
+        month = input('January, February,...,June?      ').lower().strip()
         while month not in sixmonths:
             print('Please enter a valid months.')
-            month = input('January, February,...,June?      ')
+            month = input('January, February,...,June?      ').lower().strip()
 
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
@@ -170,6 +170,12 @@ def user_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
+def display_data(answer,dataframe):
+    start_loc = 0
+    while answer == 'yes':
+        print(dataframe[start_loc:start_loc+5])
+        start_loc += 5
+        answer = input('\n\nDo you want to see 5 more lines? Yes or No?'        ).lower().strip()
 
 def main():
     while True:
@@ -180,6 +186,9 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
+
+        see_details = input('\n\nMaybe you want to see the user data in detail. Perhaps 5 lines. Yes or No?     ').lower().strip()
+        display_data(see_details,df)
 
         another_enquiry = input('Do you want to start another enquiry? Yes or No?     ').lower().strip()
 
