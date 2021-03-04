@@ -25,8 +25,7 @@ def get_filters():
     city = input('\n\nWhich city you are interested? Chicago, Washington or New York City?      ').lower().strip()
 
     while city not in threeCities:
-        print('\n\nPlease enter a valid city name.')
-        city = input('Chicago, Washington or New York City?     ')
+        city = input('\n\nPlease enter a valid city name.\nChicago, Washington or New York City?     ')
 
     month = input('\n\nDo you want to look into a specific month? Yes or No?      ').lower().strip()
 
@@ -35,8 +34,7 @@ def get_filters():
     elif month == 'yes':
         month = input('January, February,...,June?      ').lower().strip()
         while month not in sixMonths:
-            print('Please enter a valid months.')
-            month = input('January, February,...,June?      ').lower().strip()
+            month = input('Please enter a valid months.\nJanuary, February,...,June?      ').lower().strip()
 
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
@@ -47,8 +45,7 @@ def get_filters():
     elif day == 'yes':
         day = input('Monday, Tuesday,..., Sunday?       ').title()
         while day not in sevendays:
-            print('Please enter a valid dayname.        ')
-            day = input('Monday, Tuesday,..., Sunday?'      ).title()
+            day = input('Please enter a valid dayname.\nMonday, Tuesday,..., Sunday?'      ).title()
 
 
     print('-'*40)
@@ -101,9 +98,8 @@ def time_stats(df):
 
     # TO DO: display the most common start hour
     df['hour'] = pd.to_datetime(df['Start Time']).dt.hour
-    print('Most Common Hour of Day: ',df['hour'].mode()[0])
-
-    print("\nThis took %s seconds." % (time.time() - start_time))
+    print('Most Common Hour of Day: ',df['hour'].mode()[0],
+    "\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
 
@@ -193,8 +189,7 @@ def main():
         another_enquiry = input('Do you want to start another enquiry? Yes or No?     ').lower().strip()
 
         while another_enquiry not in ('yes','no'):
-            print('\n\nPlease enter a valid answer.')
-            another_enquiry = input('Yes/No?     ').lower().strip()
+            another_enquiry = input('\n\nPlease enter a valid answer.\nYes/No?     ').lower().strip()
 
         if another_enquiry == 'no':
             print('\n\nI am happy to help you. Have a nice day!')
