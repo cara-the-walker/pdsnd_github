@@ -17,14 +17,14 @@ def get_filters():
     """
     print('Hello! Let\'s explore some US bikeshare data!')
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
-    threecities = ['chicago','washington','new york city']
-    sixmonths = ['january','february','march','april','may','june']
-    sevendays = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']
+    threeCities = ['chicago','washington','new york city']
+    sixMonths = ['january','february','march','april','may','june']
+    sevenDays = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']
 
     # TO DO: get user input for month (all, january, february, ... , june)
     city = input('\n\nWhich city you are interested? Chicago, Washington or New York City?      ').lower().strip()
 
-    while city not in threecities:
+    while city not in threeCities:
         print('\n\nPlease enter a valid city name.')
         city = input('Chicago, Washington or New York City?     ')
 
@@ -34,7 +34,7 @@ def get_filters():
         month = 'all'
     elif month == 'yes':
         month = input('January, February,...,June?      ').lower().strip()
-        while month not in sixmonths:
+        while month not in sixMonths:
             print('Please enter a valid months.')
             month = input('January, February,...,June?      ').lower().strip()
 
